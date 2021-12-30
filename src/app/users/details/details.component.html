@@ -1,0 +1,17 @@
+<!-- <ng-container *ngIf="loader; else mainContent">Cargando...</ng-container> -->
+<!-- <ng-template #mainContent>
+  <p>{{ dataSource.id }}</p>
+  <p>{{ dataSource.name }}</p>
+  <p>{{ dataSource.username }}</p>
+  <p>{{ dataSource.email }}</p>
+</ng-template> -->
+<ng-container *ngIf="user$ | async as user; else loading">
+  <div>
+    <p>{{ user.id }}</p>
+    <p>{{ user.name }}</p>
+    <p>{{ user.username }}</p>
+    <p>{{ user.email }}</p>
+  </div>
+</ng-container>
+<ng-template #loading>Cargando...</ng-template>
+<div>El texto es: {{ texto }}</div>

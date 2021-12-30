@@ -1,0 +1,21 @@
+<form [formGroup]="form" (ngSubmit)="edittingUser()" class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Name" formControlName="name" required />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Username</mat-label>
+    <input
+      matInput
+      placeholder="Username"
+      formControlName="username"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Username" formControlName="email" required />
+  </mat-form-field>
+  <button type="submit">Enviar</button>
+</form>

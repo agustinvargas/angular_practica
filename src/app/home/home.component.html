@@ -1,0 +1,9 @@
+<p>home works!</p>
+<h2>Probando BehavierSubject entre componentes</h2>
+<app-list></app-list>
+<app-details></app-details>
+<hr />
+
+<h2>Probando Output/Input entre hermanos</h2>
+<app-padre [clicks]="clicks" (text)="texto($event)"></app-padre>
+<app-hijo (cantidadClicks)="clicksDelHijo($event)" [text]="text"></app-hijo>
